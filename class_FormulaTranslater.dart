@@ -96,7 +96,14 @@ class FormulaTranslater{
             }
             if (id != -1){
               if (sings[id]=='/'){
+                if (num[id+1]==0){
+                  _codeError = 6;
+                  _formulaErrors = "Деление на 0";
+                  return 0;
+                }
+                else{ 
                 res = num[id]/num[id+1];
+                }
               }
               if (sings[id]== '*') {
                 res = num[id]*num[id+1];

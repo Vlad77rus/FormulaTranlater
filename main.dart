@@ -37,15 +37,15 @@ void main(List<String> arguments) {
   print("!! Пример из д.з. !! : ${ft7.getResult()}");
   print('${ft7.getErrors()}\n');
 
-  var ft8 = FormulaTranslater (strformula: '-4(20(-3x)y(-15*-12y))', mapParam: {"x" : -10, "y" : 4});
+  var ft8 = FormulaTranslater (strformula: '-4(20(-3x)y(-15*-12/z))', mapParam: {"x" : -10, "y" : 4});
   print("Пример-8 : ${ft8.getResult()}");
   print('${ft8.getErrors()}\n');
 
-  var ft9 = FormulaTranslater (strformula: '----241.0*-1', mapParam: {"x" : -10, "y" : 4}); //такие штуки считает калькулятор в Ubuntu -"Калькулятор с финансовым и научным режимами. версия 41.1"
+  var ft9 = FormulaTranslater (strformula: '1/0', mapParam: {"x" : -10, "y" : 4}); //такие штуки считает калькулятор в Ubuntu -"Калькулятор с финансовым и научным режимами. версия 41.1"
   print("Пример-9 : ${ft9.getResult()}");
   print('${ft9.getErrors()} \n');
   
-  var ft10 = FormulaTranslater (strformula: '(x)(z(4+(2x+3)y/15.56y)-4)/10.6', mapParam: {"x" : -10, "y" : 4 ,  'z':30});
+  var ft10 = FormulaTranslater (strformula: '(x)(z(4+(2x+3)y/15.56y)-4)/0', mapParam: {"x" : -10, "y" : 4 ,  'z':30});
   print("Пример-10 : ${ft10.getResult()}");
   print('${ft10.getErrors()}\n');
 
